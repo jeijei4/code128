@@ -2,11 +2,10 @@
 /*
 * Basado en: https://github.com/davidscotttufts/php-barcode
 */
-function getBarcodeSRC1($texto, $esBoleta=false)
-    {
-		if($esBoleta) $texto = str_ireplace(chr(45), chr(47), $texto);
+function getBarcodeSRC($texto, $enEspanol=false) {
+        if ($enEspanol) $texto = str_ireplace(chr(45), chr(47), $texto);
         $size = 16; //int. original:20
-		$density = 1; //the density of the spaces and lines
+        $density = 1; //the density of the spaces and lines
         $code_string = "";
         $chksum = 104;
         // No debe cambiar el orden de los elementos de la matriz, ya que la suma de verificación depende de la clave de la matriz para validar el código final.
@@ -35,7 +34,7 @@ function getBarcodeSRC1($texto, $esBoleta=false)
         $white = imagecolorallocate($image, 255, 255, 255);
 
         imagefill($image, 0, 0, $white);
-		imagesetthickness($image, $density);
+        imagesetthickness($image, $density);
 
         $location = 10;
         for ($position = 1; $position <= strlen($code_string); $position++) {
