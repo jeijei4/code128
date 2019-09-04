@@ -1,3 +1,4 @@
+<?php
 function getBarcodeSRC1($texto, $esBoleta=false)
     {
 		if($esBoleta) $texto = str_ireplace(chr(45), chr(47), $texto);
