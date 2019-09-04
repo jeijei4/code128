@@ -1,4 +1,7 @@
 <?php
+/*
+* Basado en: https://github.com/davidscotttufts/php-barcode
+*/
 function getBarcodeSRC1($texto, $esBoleta=false)
     {
 		if($esBoleta) $texto = str_ireplace(chr(45), chr(47), $texto);
