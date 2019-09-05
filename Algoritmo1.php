@@ -116,7 +116,8 @@
 		$img_height = $code_length*$stretch;
 	}
 
-	$image = imagecreatetruecolor($img_width, $img_height + $text_height);
+	$image = @imagecreatetruecolor($img_width, $img_height + $text_height) 
+		 or die('No se puede Iniciar el nuevo flujo a la imagen GD');
 	$black = imagecolorallocate ($image, 0, 0, 0);
 	$white = imagecolorallocate ($image, 255, 255, 255);
 
