@@ -118,8 +118,16 @@
 
 	$image = @imagecreatetruecolor($img_width, $img_height + $text_height) 
 		 or die('No se puede Iniciar el nuevo flujo a la imagen GD');
+	
+	/*
+	//Necesario si se va a usar transparencia:
+	//Desactivar la mezcla alfa y establecer la bandera alfa
+	imagealphablending($image, false);
+	imagesavealpha($image, true); */
+	
 	$black = imagecolorallocate ($image, 0, 0, 0);
 	$white = imagecolorallocate ($image, 255, 255, 255);
+	//$transparent = imagecolorallocatealpha($image,0x00,0x00,0x00,127);
 
 	imagefill( $image, 0, 0, $white );
 	imagesetthickness($image, $density);
