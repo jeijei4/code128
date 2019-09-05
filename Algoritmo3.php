@@ -1,8 +1,9 @@
 <?php
+
 // Código: http://grandzebu.net/informatique/codbar/code128_PHP.txt
 //Origen: http://grandzebu.net/informatique/codbar-en/code128.htm
 
-function Code128($chaine){
+function Code128($chaine) {
   $code128="";
   if(strlen($chaine)>0){
     $z=0;
