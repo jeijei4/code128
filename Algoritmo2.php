@@ -34,7 +34,7 @@ function getBarcodeSRC($texto, $enEspanol = false) {
 
         // Convertirla a paleta sin entramado y 2 colores 
         // (desactivar si se va a usar transparencia)
-        imagetruecolortopalette($image, false, 2);
+        @imagetruecolortopalette($image, false, 2);
 
         //Fill the image white
         //Set the line thickness (based on $density)
