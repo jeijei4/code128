@@ -2,6 +2,7 @@
     /**
      * Retorna el SRC de una imagen PNG con el barcode del texto enviado.
      * Basado en: https://github.com/davidscotttufts/php-barcode (04-09-2019)
+     * Otro: https://github.com/elminson/barcode
      *
      * Tipo default: code128 (code128b), code128a, code39, code25, codabar.
      * Orientación: horizontal
